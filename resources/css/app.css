@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap);html,
+
+
+body {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  height: 100vh;
+  margin: 0;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.position-ref {
+  position: relative;
+}
+
+.top-right {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: 84px;
+}
+
+.links > a {
+  color: #636b6f;
+  padding: 0 25px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.m-b-md a {
+  margin-bottom: 30px;
+}
+
+.blackBackground {
+  background-color: black;
+}
+
+.bar {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  color: white;
+  text-decoration: none;
+  height: 40px;
+  width: 40px;
+}
+
+.made{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 10px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: whitesmoke;
+}
+
+.lv-icon{
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.techStack{
+  margin-top: 50px;
+}
+
+.techSize{
+  width: 40px;
+  height: 40px;
+}
+
+.nameContainer{
+  padding-top: 300px;
+  margin-right: 600px;
+}
+
+.sideNav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(19, 18, 18);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sideNav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sideNav a:hover {
+  color: #f1f1f1;
+}
