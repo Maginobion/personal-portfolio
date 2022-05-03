@@ -14,43 +14,66 @@
         $neededData = [
             [
                 'title'=>"Aguinaga's Lab",
-                "description"=>"Un proyecto para un laboratorio de vacunas.",
-                "stack"=>['react', 'tailwind', 'next'],
+                "description"=>
+                    "Proyecto trabajado en React para un laboratorio de
+                    vacunas. Aplicación escrita en su totalidad bajo el
+                    paradigma de componentes funcionales.",
+                "stack"=>['react', 'next', 'tailwind'],
             ],
             [
                 "title"=>"Portafolio",
-                "description"=>"Esta página, realizada con Laravel y TailwindCSS.",
-                "stack"=>['laravel', 'tailwind'],
+                "description"=>
+                    "Esta página recopila todos los trabajos y tecnologías
+                    que domino. Diseñada con el propósito de darme a conocer
+                    al cliente.",
+                "stack"=>['laravel', 'vue', 'tailwind'],
             ]
         ];    
     @endphp
 
     <body>
         <div class="relative h-max blackBackground">
-            <a href="javascript:void(0)" onclick='openNav()'><x-clarity-bars-line class="bar"/></a>
-            <nav id="mysideNav" class="sideNav">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Projects</a>
-                <a href="">Contact</a>
-            </nav>
+            <div id="app">
+                <side-nav>
+                    <template v-slot:first>
+                        <x-nav-icon/>
+                    </template>
+                    <template v-slot:second>
+                        <x-return-icon/>
+                    </template>
+                </side-nav>                                     
+            </div>
             <div class="made mt-[50px]">
                 <p>This site was made with Laravel</p> 
                 <x-fab-laravel class="lv-icon"/>
             </div>
-            <div class="nameContainer flex-center">
-                <x-private-myName/>
+            <div class="nameContainer flex-center space-x-12 pt-[200px]">
+                <div class='w-[600px]'>
+                    <x-private-myName/>
+                    <p class="mt-4">
+                        Estudiante de universidad de cuarto año.
+                        Dispuesto a aprender nuevas tecnologías.
+                        Ávido lector y amante de los lenguajes
+                        naturales y de programación.
+                    </p>
+                </div>               
+                <img src="{{url('images/selfie.jpeg')}}" alt="Image"/>
             </div> 
-            <div class="flex justify-center space-x-8 mt-10">   
-                <x-icomoon-html-five class="techSize"/>
-                <x-si-css3 class="techSize"/>  
-                <x-bxl-tailwind-css class="techSize"/>
-                <x-si-javascript class="techSize"/>
-                <x-fab-laravel class="techSize"/>
-                <x-fab-react class="techSize"/>              
-                <x-fileicon-nextjs class="techSize"/>
-            </div>
-            <div class="flex flex-col items-center mt-10 space-y-16 pb-16">
+            <div class="flex flex-col items-center mt-16">
+                <div class="headTitle">Tecnologías</div>
+                <div class="flex justify-center space-x-8 mt-4 mb-16">   
+                    <x-icomoon-html-five class="techSize"/>
+                    <x-si-css3 class="techSize"/>  
+                    <x-bxl-tailwind-css class="techSize"/>
+                    <x-si-javascript class="techSize"/>
+                    <x-fab-laravel class="techSize"/>
+                    <x-fab-react class="techSize"/>     
+                    <x-si-vuedotjs class="techSize"/>         
+                    <x-fileicon-nextjs class="techSize"/>                
+                </div>
+            </div>     
+            <div class="headTitle text-center">Proyectos</div>      
+            <div class="flex flex-col items-center space-y-16 pb-16">
                 @foreach ($neededData as $item)
                     <x-project-card :stack="json_encode($item['stack'])">
                         <x-slot:title>
@@ -65,4 +88,4 @@
         </div>          
     </body>
 </html>
-<script type="text/javascript" src="{{ asset('js/app.js') }}"></script> 
+<script src="{{ mix('js/app.js') }}" defer></script>

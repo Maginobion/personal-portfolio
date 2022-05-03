@@ -10,6 +10,7 @@
         "blade-ui-kit/blade-ui-kit": "^0.3.4",
         "codeat3/blade-clarity-icons": "^1.7",
         "codeat3/blade-file-icons": "^1.7",
+        "codeat3/blade-iconpark": "^1.4",
         "codeat3/blade-simple-icons": "^1.36",
         "codeat3/blade-uiw-icons": "^1.3",
         "guzzlehttp/guzzle": "^7.2",
