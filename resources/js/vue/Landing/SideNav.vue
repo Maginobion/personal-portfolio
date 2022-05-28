@@ -63,13 +63,13 @@ export default {
 
 <template>
     <a @click="setNav(true)" class="iconContainer">
-        <slot name="first"></slot>
+        <slot name="bar"></slot>
     </a>
     <nav :class="{activeSideNav : isOpen}" class="sideNav">
-        <a href="#Home">Home</a>
-        <a href="#About">About</a>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
         <a href="#Projects">Projects</a>
-        <a href="#Contact">Contact</a>
-        <div @click="setNav(false)" class="ml-[300px] mt-[30px]"> <slot name="second"></slot></div>
+        <a href="/contact">Contact</a>
+        <div @click="setNav(false)" class="ml-[300px] mt-[30px]"> <slot name="return"></slot></div>
     </nav>
 </template>

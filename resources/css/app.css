@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 @import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap);
-@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@1,100&display=swap');html,
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');html,
 
 body {
   background-color: #fff;
@@ -22,10 +24,6 @@ body {
   align-items: center;
   display: flex;
   justify-content: center;
-}
-
-.position-ref {
-  position: relative;
 }
 
 .top-right {
@@ -56,10 +54,6 @@ body {
   margin-bottom: 30px;
 }
 
-.blackBackground {
-  background-color: black;
-}
-
 .nameContainer>img{
   width: 300px;
   height: 300px;
@@ -67,6 +61,13 @@ body {
   box-shadow: 0px 0px 30px 10px rgba(255,255,255,0.31);
   -webkit-box-shadow: 0px 0px 30px 10px rgba(255,255,255,0.31);
   -moz-box-shadow: 0px 0px 30px 10px rgba(255,255,255,0.31);
+}
+
+.subTitle{
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 30px;
+  margin-top: 4px;
+  margin-left: 15px;
 }
 
 .made{
@@ -95,7 +96,7 @@ body {
 
 .headTitle{
   font-family: 'K2D', sans-serif;
-  color: rgba(255, 246, 246, 0.978);
+  color: #fff6f6f9;
   margin-bottom: 20px;
   font-size: 40px;
 }

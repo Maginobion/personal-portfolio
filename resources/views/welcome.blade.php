@@ -4,9 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Home</title>
 
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" >
     </head>
 
@@ -32,24 +31,20 @@
     @endphp
 
     <body>
-        <div class="relative h-max blackBackground">
-            <div id="app">
-                <side-nav>
-                    <template v-slot:first>
-                        <x-nav-icon/>
-                    </template>
-                    <template v-slot:second>
-                        <x-return-icon/>
-                    </template>
-                </side-nav>                                     
-            </div>
+        <x-responsive>
             <div class="made mt-[50px]">
                 <p>This site was made with Laravel</p> 
                 <x-fab-laravel class="lv-icon"/>
             </div>
-            <div class="nameContainer flex-center space-x-12 pt-[200px]">
+            <div id="app">
+                <title-colors/>
+            </div>
+            <div class="nameContainer flex-center space-x-14 pt-[200px]">
                 <div class='w-[600px]'>
-                    <x-private-myName/>
+                    <div class="flex items-center">
+                        <x-private-myName/>
+                        <p class="subTitle">Frontend Developer</p>
+                    </div>
                     <p class="mt-4">
                         Estudiante de universidad de cuarto año.
                         Dispuesto a aprender nuevas tecnologías.
@@ -61,15 +56,39 @@
             </div> 
             <div class="flex flex-col items-center mt-16">
                 <div class="headTitle">Tecnologías</div>
-                <div class="flex justify-center space-x-8 mt-4 mb-16">   
-                    <x-icomoon-html-five class="techSize"/>
-                    <x-si-css3 class="techSize"/>  
-                    <x-bxl-tailwind-css class="techSize"/>
-                    <x-si-javascript class="techSize"/>
-                    <x-fab-laravel class="techSize"/>
-                    <x-fab-react class="techSize"/>     
-                    <x-si-vuedotjs class="techSize"/>         
-                    <x-fileicon-nextjs class="techSize"/>                
+                <div class="flex justify-center space-x-8 mt-4 mb-16">
+                    <div class="flex items-center space-x-4">
+                        <x-icomoon-html-five class="techSize"/>
+                        <p>HTML5</p>
+                    </div>   
+                    <div class="flex items-center space-x-4">
+                        <x-si-css3 class="techSize"/> 
+                        <p>CSS3</p>
+                    </div>                  
+                    <div class="flex items-center space-x-4">
+                        <x-bxl-tailwind-css class="techSize"/>
+                        <p>Tailwind CSS</p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <x-si-javascript class="techSize"/>
+                        <p>Javascript</p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <x-fab-laravel class="techSize"/>
+                        <p>Laravel</p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <x-fab-react class="techSize"/>
+                        <p>React</p>
+                    </div>    
+                    <div class="flex items-center space-x-4">
+                        <x-si-vuedotjs class="techSize"/>
+                        <p>Vue.js</p>
+                    </div>   
+                    <div class="flex items-center space-x-4">
+                        <x-fileicon-nextjs class="techSize"/>
+                        <p>Next.js</p>
+                    </div>           
                 </div>
             </div>     
             <div class="headTitle text-center">Proyectos</div>      
@@ -84,8 +103,8 @@
                         </x-slot>
                     </x-project-card>
                 @endforeach
-            </div>    
-        </div>          
+            </div>
+        </x-responsive>          
     </body>
 </html>
 <script src="{{ mix('js/app.js') }}" defer></script>
