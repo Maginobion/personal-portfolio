@@ -1,6 +1,6 @@
 <template>
     <div class="w-[500px]">
-        <h1 class="title" @click="a">Acerca de mí</h1>
+        <h1 class="title">Acerca de mí</h1>
         <p>
             Soy un desarrollador Front-end que reside en Perú.
             Tengo una pasión latente por lograr una exquisita
@@ -19,8 +19,9 @@
         <p>
             Trabajando en proyectos ambiciosos con personas
             positivas.
-        </p><br/>
-        <a href="">Hagamos realidad tu idea.</a>
+        </p>
+        <br>
+        <a href="/contact">Hagamos realidad tu idea.</a>
     </div>
 </template>
 
@@ -30,16 +31,41 @@
     font-size: 64px;
     color: var(--mycolor);
     filter: drop-shadow(0 0 20px var(--mycolor));
+    margin-bottom: 20px;
     transition: 1s all ease-in-out;
 }
-a::after{
-    display: block;
-    width: 0px;
-    height: 2px;
-    border-bottom: 2px solid white;
+a{
+    position: relative;
+    cursor: pointer;
+    transition: 1s all ease-in-out;
+    color:rgb(177 177 177);
 }
-a.hover::before{
+a:hover{
+    color: white;
+    animation: glow 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px white);
+}
+a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    margin-top: -5px;
+    height: 1px;
+    background-color: white;
+    transition: 1s all ease-in-out;
+}
+a:hover::after{
     width: 100%;
+}
+@keyframes glow {
+    50%{
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #bfdef8, 0 0 40px #bfdef8, 0 0 50px #bfdef8,
+  }
+  100%{
+      text-shadow: 0 0 10px #fff, 0 0 20px #059fe7, 0 0 30px #059fe7, 0 0 40px #059fe7, 0 0 50px #059fe7,;
+  }
 }
 </style>
 

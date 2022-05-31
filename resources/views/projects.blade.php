@@ -10,14 +10,7 @@
 </head>
 <body>
     <x-responsive>
-        <div class="flex justify-center items-center space-x-10 pt-[100px] pb-[150px]">
-            <div class="id">
-                <about-me/>
-            </div>
-            <div class="id">
-                <falling-words/>
-            </div>
-        </div>  
+        Proyectos papu 
     </x-responsive>
 </body>
 </html>

@@ -7,8 +7,6 @@
   z-index: 1;
   top: 0;
   left: 0;
-  display: flex;
-  flex-direction: column;
   background-color: rgb(19, 18, 18);
   overflow-x: hidden;
   transition: 0.5s;
@@ -17,26 +15,53 @@
 }
 
 .activeSideNav{
-  width: 380px;
+  --totalwidth: 380px;
+  width: var(--totalwidth);
 }
 
-.sideNav a {
+.stylingCont{
+  display: flex;
+  flex-direction: column;
+}
+
+:slotted(a){
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
-  transition: 0.3s;
+  position: relative;
+}
+:slotted(.Home){
+  --var: "Home" 
+}
+:slotted(.About){
+  --var: "About" 
+}
+:slotted(.Projects){
+  --var: "Projects" 
+}
+:slotted(.Contact){
+  --var: "Contact" 
+}
+:slotted(a)::before{
+  content: var(--var);
+  position: absolute;
+  left: 0;
+  background-origin: content-box;
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+  color: black;
+  width: 0;
+  overflow: hidden;
+  height: 100%;
+  padding-left: 32px;
+  transition: all 1s ease-in-out;
 }
 
-.sideNav a:hover {
-  color: #f1f1f1;
+:slotted(a):hover::before{
+  width: var(--totalwidth);
 }
 
 .iconContainer:hover{
-  cursor: pointer;
-}
-
-a:hover{
   cursor: pointer;
 }
 
@@ -66,10 +91,9 @@ export default {
         <slot name="bar"></slot>
     </a>
     <nav :class="{activeSideNav : isOpen}" class="sideNav">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="#Projects">Projects</a>
-        <a href="/contact">Contact</a>
+        <div class="stylingCont">
+          <slot name="content"></slot>
+        </div>
         <div @click="setNav(false)" class="ml-[300px] mt-[30px]"> <slot name="return"></slot></div>
     </nav>
 </template>
