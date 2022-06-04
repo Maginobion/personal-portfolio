@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Dylan Gonzales">
     <title>About</title>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" >
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}" >
 </head>
 <body>
     <x-responsive>
