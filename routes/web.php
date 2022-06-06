@@ -16,8 +16,9 @@ use App\Http\Controllers\ContactController;
 */
 
 Route::get('/', [HomeController::class, 'home'])->name('welcome');
-Route::get('/about', [HomeController::class, 'about'])->name('about');
-Route::get('/projects', [HomeController::class, 'projects'])->name('projects');
+Route::get('about', [HomeController::class, 'about'])->name('about');
+Route::get('projects', [HomeController::class, 'projects'])->name('projects');
 
-Route::get('/contact', [ContactController::class, 'contact'])->name('contactanos.contact');
-Route::post('/contact', [ContactController::class, 'send'])->name('contactanos.send');
+Route::get('contact', [ContactController::class, 'contact'])->name('contactanos.contact');
+Route::get('contactform', [ContactController::class, 'contactform'])->name('contactanos.mail');
+Route::post('contact', [ContactController::class, 'mailSend'])->name('contactanos.mailsend');

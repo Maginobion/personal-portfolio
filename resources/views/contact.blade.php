@@ -23,7 +23,7 @@
                     1913010909@untels.edu.pe
                 </a>
             </div>            
-            <form action="{{route('contactanos.send')}}" method="POST">
+            <form action="{{route('contactanos.mailsend')}}" method="POST">
                 <div class="flex flex-col">
                     @csrf
                     <p>Nombre:</p>
@@ -34,7 +34,7 @@
                     <input type="text" name="subject">
                     <p>Mensaje:</p>
                     <input type="text" name="message">
-                    <input type="submit" value="Confirmar">
+                    <input type="submit" value="Confirmar" class="mt-4">
                 </div>
             </form>
         </div>  

@@ -29,6 +29,13 @@ class TestEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('contactform');
+        return $this->view('contactform')
+                    ->with([
+                        'name'=> $this->mailData['name'],
+                        'mail'=> $this->mailData['mail'],
+                        'subject'=> $this->mailData['subject'],
+                        'content'=> $this->mailData['message'],
+                    ])
+                    ->from('example@example.com', 'Example');
     }
 }

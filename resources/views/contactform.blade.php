@@ -8,9 +8,9 @@
 </head>
 <body>
     <h1>Hola papu</h1>
-    Nombre: {{$mailData['name']}}
-    Mail: {{$mailData['mail']}}
-    Asunto: {{$mailData['subject']}}
-    Mensaje: {{$mailData['message']}}
+    <p>Nombre: {{$name}}</p>
+    <p>Mail: {{$mail}}</p>
+    <p>Asunto: {{$subject}}</p>
+    <p>Mensaje: {{$content}}</p>
 </body>
 </html>
