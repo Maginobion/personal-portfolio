@@ -10,13 +10,8 @@
 </head>
 <body>
     <x-responsive>
-        <div class="flex justify-center items-center space-x-10 pt-[200px] pb-[150px]">
-            <div class="id">
-                <about-me/>
-            </div>
-            <div class="id">
-                <falling-words/>
-            </div>
+        <div class="flex justify-center items-center space-x-10 pt-[100px] pb-[150px]">
+            ¡Enviado con éxito!
         </div>  
     </x-responsive>
 </body>

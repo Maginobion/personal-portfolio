@@ -20,7 +20,7 @@ class ContactController extends Controller
             'subject'=>$request->subject,
             'message'=>$request->message,
         ];
-        Mail::to('1913010909@gmail.com')->send(new TestEmail($data));
-        return "Enviadisimo";
+        Mail::to('1913010909@untels.edu.pe')->send(new TestEmail($data));
+        return view('mailsuccess');
     }
 }

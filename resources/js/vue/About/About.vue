@@ -28,11 +28,14 @@
 <style scoped>
 .title{
     --mycolor: v-bind('mycolor');
-    font-size: 64px;
+    font-size: 70px;
     color: var(--mycolor);
     filter: drop-shadow(0 0 20px var(--mycolor));
     margin-bottom: 20px;
     transition: 1s all ease-in-out;
+}
+p{
+    font-size: 18px;
 }
 a{
     position: relative;

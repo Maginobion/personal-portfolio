@@ -1,4 +1,4 @@
-<div class="relative h-max w-full bg-black">
+<div class="relative min-h-screen w-full bg-black after:h-[145px] after:block">
     <div id="app">
         <side-nav>
             <template v-slot:bar>
@@ -13,8 +13,8 @@
                 <a href={{ route('projects') }} class="Projects">Projects</a>
                 <a href={{ route('contactanos.contact') }} class="Contact">Contact</a>
             </template>
-        </side-nav>                                         
-        {{$slot}}
-    </div>
+        </side-nav>    
+        {{$slot}}                                    
+    </div>  
     <x-footer/>  
 </div>

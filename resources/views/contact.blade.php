@@ -7,10 +7,23 @@
     <meta name="author" content="Dylan Gonzales">
     <title>About</title>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" >
+    <style>
+        .container{
+            color: white
+        }
+        div>input{
+            border-radius: 10px;
+            padding: 5px;
+            width: 100%
+        }
+        a{
+            color: white
+        }
+    </style>
 </head>
 <body>
     <x-responsive>
-        <div class="flex justify-center items-center space-x-10 pt-[100px]">
+        <div class="flex justify-center items-center space-x-10 pt-[200px]">
             <div class="w-[500px]">
                 <h1>¿Interesado?</h1>
                 <p>
@@ -24,17 +37,27 @@
                 </a>
             </div>            
             <form action="{{route('contactanos.mailsend')}}" method="POST">
-                <div class="flex flex-col">
-                    @csrf
-                    <p>Nombre:</p>
-                    <input type="text" name="name">
-                    <p>Correo:</p>
-                    <input type="email" name="mail">
-                    <p>Asunto:</p>
-                    <input type="text" name="subject">
-                    <p>Mensaje:</p>
-                    <input type="text" name="message">
-                    <input type="submit" value="Confirmar" class="mt-4">
+                <div class="w-[700px] bg-stone-800 rounded-lg">
+                    <div class="container flex flex-col space-y-4 p-4">
+                        @csrf
+                        <div>
+                            <p>Nombre:</p>
+                            <input type="text" name="name">
+                        </div>
+                        <div>
+                            <p>Correo:</p>
+                            <input type="email" name="mail">
+                        </div>
+                        <div>
+                            <p>Asunto:</p>
+                            <input type="text" name="subject">
+                        </div>
+                        <div>
+                            <p>Mensaje:</p>
+                            <input type="text" name="message">
+                        </div>
+                        <input type="submit" value="Confirmar" class="mt-4">
+                    </div>
                 </div>
             </form>
         </div>  

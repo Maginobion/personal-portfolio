@@ -10,7 +10,7 @@
 </head>
 <body>
     <x-responsive>
-        Proyectos papu 
+        <div class="flex justify-center pt-64">Proyectos papu </div>
     </x-responsive>
 </body>
 </html>

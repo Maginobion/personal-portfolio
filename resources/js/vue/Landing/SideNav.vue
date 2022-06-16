@@ -15,8 +15,7 @@
 }
 
 .activeSideNav{
-  --totalwidth: 380px;
-  width: var(--totalwidth);
+  width: 380px;
 }
 
 .stylingCont{
@@ -25,7 +24,9 @@
 }
 
 :slotted(a){
-  padding: 8px 8px 8px 32px;
+  padding: 12px 12px 12px 32px;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
@@ -51,14 +52,16 @@
   background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
   color: black;
   width: 0;
+  display: flex;
+  align-items: center;
   overflow: hidden;
   height: 100%;
   padding-left: 32px;
-  transition: all 1s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
 :slotted(a):hover::before{
-  width: var(--totalwidth);
+  width: 380px;
 }
 
 .iconContainer:hover{
