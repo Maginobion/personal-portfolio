@@ -3,9 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>Home</title>
-
         <link rel="stylesheet" href="{{ mix('css/app.css') }}" >
     </head>
 
@@ -51,8 +49,8 @@
                         Ávido lector y amante de los lenguajes
                         naturales y de programación.
                     </p>
-                </div>               
-                <img src="{{url('images/selfie.jpeg')}}" alt="Image"/>
+                </div>
+                <img src="{{url('images/selfie.webp')}}" alt="Image"/>            
             </section> 
             <section class="flex flex-col items-center mt-16">
                 <div class="headTitle">Tecnologías</div>
