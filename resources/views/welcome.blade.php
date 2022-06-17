@@ -39,7 +39,7 @@
             <div id="app">
                 <title-colors/>
             </div>
-            <div class="nameContainer flex-center space-x-14 pt-[200px]">
+            <section class="nameContainer flex-center space-x-14 pt-[200px]">
                 <div class='w-[600px]'>
                     <div class="flex items-center">
                         <x-private-myName/>
@@ -53,8 +53,8 @@
                     </p>
                 </div>               
                 <img src="{{url('images/selfie.jpeg')}}" alt="Image"/>
-            </div> 
-            <div class="flex flex-col items-center mt-16">
+            </section> 
+            <section class="flex flex-col items-center mt-16">
                 <div class="headTitle">Tecnologías</div>
                 <div class="flex justify-center space-x-8 mt-4 mb-16">
                     <div class="flex items-center space-x-4">
@@ -90,20 +90,22 @@
                         <p>Next.js</p>
                     </div>           
                 </div>
-            </div>     
-            <div class="headTitle text-center">Proyectos</div>      
-            <div class="flex flex-col items-center space-y-16 pb-16">
-                @foreach ($neededData as $item)
-                    <x-project-card :stack="json_encode($item['stack'])">
-                        <x-slot:title>
-                            {{$item['title']}}
-                        </x-slot>
-                        <x-slot:description>
-                            {{$item['description']}}
-                        </x-slot>
-                    </x-project-card>
-                @endforeach
-            </div>
+            </section>     
+            <section>
+                <div class="headTitle text-center">Proyectos</div>
+                <div class="flex flex-col items-center space-y-16 pb-16">
+                    @foreach ($neededData as $item)
+                        <x-project-card :stack="json_encode($item['stack'])">
+                            <x-slot:title>
+                                {{$item['title']}}
+                            </x-slot>
+                            <x-slot:description>
+                                {{$item['description']}}
+                            </x-slot>
+                        </x-project-card>
+                    @endforeach
+                </div>
+            </section>
         </x-responsive>          
     </body>
 </html>
