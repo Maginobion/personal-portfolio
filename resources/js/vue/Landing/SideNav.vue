@@ -83,9 +83,6 @@ export default {
             this.isOpen=state;
         }
     },
-    mounted(){
-      console.log('Componente montado')
-    }
 }
 </script>
 
